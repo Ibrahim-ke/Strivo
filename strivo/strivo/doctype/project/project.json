@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:PR-{###}",
  "creation": "2025-06-16 23:52:52.708471",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -14,7 +15,8 @@
   "project_manager",
   "project_type",
   "column_break_ejxb",
-  "description"
+  "description",
+  "team_members"
  ],
  "fields": [
   {
@@ -69,15 +71,22 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Description"
+  },
+  {
+   "fieldname": "team_members",
+   "fieldtype": "Table",
+   "label": "Team_members",
+   "options": "Project_team"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-16 23:55:05.004816",
- "modified_by": "Administrator",
+ "modified": "2025-06-19 10:24:36.304224",
+ "modified_by": "admin@strivo.com",
  "module": "Strivo",
  "name": "Project",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
