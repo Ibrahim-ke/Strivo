@@ -1,0 +1,702 @@
+{
+	"info": {
+		"_postman_id": "29e42bfd-489c-4502-ba5f-3a6d1e786ffb",
+		"name": "Strivo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19038995"
+	},
+	"item": [
+		{
+			"name": "Project Endpoints",
+			"item": [
+				{
+					"name": "Create Project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project_name\":\"Project manager Project\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.project.api.create_project",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.project.api.create_project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Project",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{strivo_base_url}}api/resource/",
+							"host": [
+								"{{strivo_base_url}}api"
+							],
+							"path": [
+								"resource",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.project.api.change_status",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.project.api.change_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change priority",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.project.api.change_priority",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.project.api.change_priority"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change project type",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"PR-001\",\n    \"project_type\":\"Research\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.project.api.change_project_type",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.project.api.change_project_type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"PR-001\",\n    \"status\":\"In progress\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.project.api.update_project?name=PR-001",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.project.api.update_project"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "PR-001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Projects",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "token a66ca641c16bcbc:634318df760f34e:",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token a66ca641c16bcbc:634318df760f34e:",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.project.api.get_all_projects",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.project.api.get_all_projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get A Project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.project.api.get_project?name=PR-001",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.project.api.get_project"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "PR-001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task Endpoints",
+			"item": [
+				{
+					"name": "Get all tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.task.api.get_all_tasks",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.task.api.get_all_tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get my tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.task.api.get_my_tasks",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.task.api.get_my_tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add dependancy",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\":\"j50bmau6dc\",\n  \"depends_on\": \"TASK-006\",\n  \"dependacy_type\": \"Related\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.task.api.add_dependency",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.task.api.add_dependency"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add comment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\":\"j50bmau6dc\",\n  \"comment\": \"Let's finalize this by Friday.\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.task.api.add_comment",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.task.api.add_comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\":\"j50bmau6dc\",\n  \"status\": \"In_progress\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.task.api.change_status",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.task.api.change_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.task.api.delete_task?name=okcmdv6eq1",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.task.api.delete_task"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "okcmdv6eq1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Design Landing Page\",\n  \"project\": \"PR-001\",\n  \"due_date\": \"2025-07-10\",\n  \"status\": \"In_progress\",\n  \"priority\": \"High\",\n  \"description\": \"Create wireframes and mockups for the new landing page.\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.task.api.create_task",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.task.api.create_task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update my task",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get a tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.task.api.get_task?name=j50bmau6dc",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.task.api.get_task"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "j50bmau6dc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign task",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"edqi4no9fi\",\n  \"assigned_to\": \"projectmanager@strivo.com\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.task.api.assign_task",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.task.api.assign_task"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Milestone Endpoints",
+			"item": [
+				{
+					"name": "Create Milestone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"PROJECT MANAGER\",\n    \"project\":\"PR-001\",\n    \"status\":\"Planned\",\n    \"due_date\":\"2025-07-06\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.milestone.api.create_milestone",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.milestone.api.create_milestone"
+							],
+							"query": [
+								{
+									"key": "milestone_name",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "project",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"MS-OO3\",\n    \"status\":\"Achieved\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.milestone.api.change_status",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.milestone.api.change_status"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "MS-003",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Milestone",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"pfooj14gtp\",\n    \"description\":\"testing\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.milestone.api.update_milestone?name=MS-003",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.milestone.api.update_milestone"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "MS-003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Milestone",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.milestone.api.delete_milestone?name=MS-004",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.milestone.api.delete_milestone"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "MS-004"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Milestone",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.milestone.api.get_milestone?name=<milestone_id>",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.milestone.api.get_milestone"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "<milestone_id>"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all milestones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{strivo_base_url}}/api/method/strivo.api.milestone.api.get_all_milestones",
+							"host": [
+								"{{strivo_base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"strivo.api.milestone.api.get_all_milestones"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{strivo_base_url}}/api/method/strivo.api.api.ping",
+					"host": [
+						"{{strivo_base_url}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"strivo.api.api.ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"usr\": \"projectmanager@strivo.com\",\n  \"pwd\": \"Testing/12\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{strivo_base_url}}/api/method/login",
+					"host": [
+						"{{strivo_base_url}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
