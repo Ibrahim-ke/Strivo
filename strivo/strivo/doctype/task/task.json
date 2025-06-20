@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:Task-{###}",
  "creation": "2025-06-16 23:52:52.767598",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -51,7 +52,7 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Markdown Editor",
    "label": "Description"
   },
   {
@@ -70,10 +71,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-16 23:54:34.474071",
- "modified_by": "Administrator",
+ "modified": "2025-06-20 10:13:58.826360",
+ "modified_by": "admin@strivo.com",
  "module": "Strivo",
  "name": "Task",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

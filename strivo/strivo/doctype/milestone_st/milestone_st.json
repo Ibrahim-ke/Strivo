@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:MS-{###}",
  "creation": "2025-06-16 16:27:15.725875",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,44 +10,58 @@
   "project",
   "due_date",
   "description",
-  "status"
+  "status",
+  "project_manager"
  ],
  "fields": [
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title"
+   "label": "Title",
+   "reqd": 1
   },
   {
    "fieldname": "project",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Project",
-   "options": "Project"
+   "options": "Project",
+   "reqd": 1
   },
   {
    "fieldname": "due_date",
    "fieldtype": "Date",
-   "label": "Due date"
+   "in_list_view": 1,
+   "label": "Due date",
+   "reqd": 1
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Markdown Editor",
    "label": "Description"
   },
   {
+   "default": "Planned",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
    "options": "Planned\nAchieved\nMissed"
+  },
+  {
+   "fieldname": "project_manager",
+   "fieldtype": "Link",
+   "label": "project_manager",
+   "options": "User"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-16 23:55:22.350831",
- "modified_by": "Administrator",
+ "modified": "2025-06-20 07:49:11.807644",
+ "modified_by": "admin@strivo.com",
  "module": "Strivo",
  "name": "Milestone_st",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

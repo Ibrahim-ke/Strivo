@@ -8,3 +8,27 @@
 | Change Status    | PATCH  | `/api/method/strivo.api.project.api.change_status`    |
 | Update Project   | PUT    | `/api/method/strivo.api.project.api.update_project`   |
 | Add Tags         | PATCH  | `/api/method/strivo.api.project.api.add_tags`         |
+| Change Project Type         | PATCH  | `/api/method/strivo.api.project.api.change_project_type`         |
+
+
+
+# Sample body
+## Create project
+```json 
+{
+  "project_name": "Research Portal",
+  "start_date": "2025-06-20",
+  "end_date": "2025-07-20",
+  "priority": "High",
+  "status": "Planned",
+  "tags": "urgent,client",
+  "project_type": "Client",
+  "description": "Build a platform for research data.",
+  "team_members": [
+    {
+      "team_member": "member1@strivo.com",
+      "is_team_lead": 1
+    }
+  ]
+}
+```

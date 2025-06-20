@@ -9,3 +9,4 @@
 | Add Comment    | PATCH  | `/api/method/strivo.api.task.api.add_comment?name=TASK-0001&comment_text=Almost done`     |
 | Change Status  | PATCH  | `/api/method/strivo.api.task.api.change_status?name=TASK-0001&status=Completed`           |
 | Delete Task    | DELETE | `/api/method/strivo.api.task.api.delete_task?name=TASK-0001`                              |
+| Assign Task    | PATCH  | `/api/method/strivo.api.task.api.assign_task`                                             |
